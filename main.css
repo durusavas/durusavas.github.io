@@ -1,0 +1,206 @@
+body,
+html {
+  font-family: "Montserrat", sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+  margin: 0;
+}
+
+.container {
+  max-width: 1140px;
+  margin: auto;
+}
+
+.header-image {
+  background-size: cover;
+  height: 300px;
+  background-position: center;
+}
+
+.profile-info img {
+  width: 120px;
+  height: 120px;
+  border-radius: 60px;
+  border: 3px solid #e0e0e0;
+  display: block;
+  margin: -60px auto 10px;
+}
+
+.profile-info h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h4 {
+  border-bottom: 1px solid #2c2c2c;
+
+  margin-bottom: 20px;
+  color: #bb86fc;
+  font-size: 24px;
+}
+
+h5 {
+  color: white;
+  font-size: 24px;
+}
+
+.project-detail,
+.certificate-detail,
+.education-item,
+.project-item,
+.certificate-item {
+  display: flex;
+  align-items: flex-start;
+  background-color: #1e1e1e;
+
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 15px;
+  opacity: 0; /* Initial state for animation */
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.date-container {
+  flex: 0 0 120px; /* Adjust based on your design */
+  text-align: right;
+  padding-right: 20px; /* Space between the date and the content */
+}
+
+.detail-container {
+  flex-grow: 1;
+}
+
+a {
+  color: #bb86fc;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: #181818;
+  color: #e0e0e0;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 20px;
+}
+
+/* When elements are in view */
+.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .date-container {
+    flex: 0 0 100%;
+    text-align: left;
+    padding-right: 0;
+    margin-bottom: 10px; /* Space between the date and the content on small screens */
+  }
+ 
+  .project-detail,
+  
+  .project-item,
+  .certificate-item {
+    flex-direction: column;
+  }
+}
+.contact-form .form-group {
+  margin-bottom: 15px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #bb86fc; 
+}
+
+.contact-form input[type="email"],
+.contact-form input[type="text"],
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #2c2c2c;
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.contact-form button.send-button {
+  background-color: #bb86fc;
+  color: #121212;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button.send-button:hover {
+  background-color: #9a67ea;
+}
+
+.certificates-container {
+  overflow-x: scroll;
+  white-space: nowrap;
+  position: relative;
+}
+
+.certificate-detail {
+  display: inline-block;
+  white-space: normal;
+  vertical-align: top;
+  margin-right: 20px; /* Adjust based on preference */
+  width: 300px;
+}
+
+.scroll-arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #ddd; /* Style as needed */
+  border: none;
+  padding: 10px; /* Adjust size as needed */
+}
+
+.left-arrow {
+  left: 0;
+}
+
+.right-arrow {
+  right: 0;
+}
+.project-detail {
+  display: flex;
+
+  justify-content: space-between;
+}
+
+.info-container,
+.image-gallery {
+  flex: 1;
+  padding: 15px;
+}
+
+.image-gallery img {
+  display: none; /* Hide all images by default */
+  width: 100%; /* Adjust based on your layout */
+  height: auto;
+  border-radius: 10px;
+}
+
+.image-gallery img.active {
+  display: block; /* Only show the active image */
+}
